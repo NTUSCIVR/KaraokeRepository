@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4957394408491100}
   - component: {fileID: 108017830022145778}
   m_Layer: 0
-  m_Name: PointLight
+  m_Name: SpotLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4628757520960994}
   - component: {fileID: 108175717813074150}
   m_Layer: 0
-  m_Name: PointLight
+  m_Name: SpotLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,6 +51,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4072461305155988}
+  - component: {fileID: 95247319340358012}
   m_Layer: 0
   m_Name: Lights
   m_TagString: Untagged
@@ -68,7 +69,7 @@ GameObject:
   - component: {fileID: 4920899904932998}
   - component: {fileID: 108173016884891810}
   m_Layer: 0
-  m_Name: PointLight
+  m_Name: SpotLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,7 +85,7 @@ GameObject:
   - component: {fileID: 4151775263439870}
   - component: {fileID: 108684229051666062}
   m_Layer: 0
-  m_Name: PointLight
+  m_Name: SpotLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,6 +160,24 @@ Transform:
   m_Father: {fileID: 4072461305155988}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!95 &95247319340358012
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1531712379989720}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d2d461de6bffa0341b850c58c677420f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!108 &108017830022145778
 Light:
   m_ObjectHideFlags: 1
@@ -167,8 +186,8 @@ Light:
   m_GameObject: {fileID: 1006041587987860}
   m_Enabled: 1
   serializedVersion: 8
-  m_Type: 2
-  m_Color: {r: 1, g: 0.98217714, b: 0.8443396, a: 1}
+  m_Type: 0
+  m_Color: {r: 1, g: 0, b: 1, a: 1}
   m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
@@ -204,8 +223,8 @@ Light:
   m_GameObject: {fileID: 1619929071541852}
   m_Enabled: 1
   serializedVersion: 8
-  m_Type: 2
-  m_Color: {r: 1, g: 0.98217714, b: 0.8443396, a: 1}
+  m_Type: 0
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
@@ -241,8 +260,8 @@ Light:
   m_GameObject: {fileID: 1372551956029912}
   m_Enabled: 1
   serializedVersion: 8
-  m_Type: 2
-  m_Color: {r: 1, g: 0.98217714, b: 0.8443396, a: 1}
+  m_Type: 0
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
@@ -278,8 +297,8 @@ Light:
   m_GameObject: {fileID: 1704940046879068}
   m_Enabled: 1
   serializedVersion: 8
-  m_Type: 2
-  m_Color: {r: 1, g: 0.98217714, b: 0.8443396, a: 1}
+  m_Type: 0
+  m_Color: {r: 0, g: 0, b: 1, a: 1}
   m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
