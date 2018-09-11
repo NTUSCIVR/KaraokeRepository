@@ -1,14 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class DataCollector : MonoBehaviour {
-
-    public InputField inputField;
+public class DataCollector : MonoBehaviour
+{
+    public InputField UserIdInputField;
     public string dataID = "";
+
+    public GameObject SongUI;
+    public InputField SongIdInputField;
+    public string dataSongID = "";
+
+    public GameObject PositionUI;
+    public InputField PositionIdInputField;
+    public string dataPositionID = "";
+
     public static DataCollector Instance;
 
     public bool startRecording = false;
@@ -17,48 +24,61 @@ public class DataCollector : MonoBehaviour {
     
     public GameObject user;
 
+    public enum DataToRecord
+    {
+        HeadMovement,
+        RatingVideo
+    }
+
     private void Awake()
     {
         DontDestroyOnLoad(this);
-        AssignInputField();
     }
 
     // Use this for initialization
-    void Start () {
+    private void Start ()
+    {
         Instance = this;
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    private void Update ()
+    {
         if(startRecording)
         {
             time += Time.deltaTime;
             if (time > dataRecordInterval)
             {
                 time = 0;
-                StreamWriter sw = File.AppendText(GetPath());
+                StreamWriter sw = File.AppendText(GetCSVPath(DataToRecord.HeadMovement));
                 sw.WriteLine(GenerateData());
                 sw.Close();
             }
         }
 	}
 
-    void OnInputSubmitCallback()
+    public void ProceedToChoosePosition()
     {
-        Debug.Log("change scene");
-        dataID = inputField.text;
-        CreateCSV();
+        dataID = UserIdInputField.text;
+        CreateFolder();
+        PositionUI.SetActive(true);
+    }
+
+    public void ProceedToChooseSong()
+    {
+        dataPositionID = PositionIdInputField.text;
+        SongUI.SetActive(true);
+        PositionUI.SetActive(false);
+    }
+
+    public void EnterRoom()
+    {
+        dataSongID = SongIdInputField.text;
         startRecording = true;
         SceneManager.LoadScene("MainScene");
     }
 
-    void AssignInputField()
-    {
-        inputField = FindObjectOfType<InputField>();
-        inputField.onEndEdit.AddListener(delegate { OnInputSubmitCallback(); });
-    }
-
-    string GenerateData()
+    private string GenerateData()
     {
         string data = "";
         data += System.DateTime.Now.ToString("HH");
@@ -77,31 +97,83 @@ public class DataCollector : MonoBehaviour {
         return data;
     }
 
-    private string GetPath()
+    private string GetFolderPath()
     {
+        string Folder = "/Data/";
 #if UNITY_EDITOR
-        return Application.dataPath + "/Data/" + dataID + ".csv";
-#elif UNITY_ANDROID
-        return Application.persistentDataPath+dataID + ".csv";
-#elif UNITY_IPHONE
-        return Application.persistentDataPath+"/"+dataID + ".csv";
-#else
-        return Application.dataPath +"/"+dataID + ".csv";
+        return Application.dataPath + Folder + dataID + "/";
+#elif UNITY_STANDALONE_WIN
+        return Application.dataPath + Folder + dataID + "/";
 #endif
     }
 
-    void CreateCSV()
+    // Replace existing folder or Create new folder
+    private void CreateFolder()
     {
-        if(File.Exists(GetPath()))
+        // Found same folder
+        if(Directory.Exists(GetFolderPath()))
         {
-            File.Delete(GetPath());
+            // Delete files inside the folder first
+            foreach(FileInfo file in new DirectoryInfo(GetFolderPath()).GetFiles())
+            {
+                file.Delete();
+            }
+            // Delete the folder
+            Directory.Delete(GetFolderPath());
         }
-        StreamWriter output = System.IO.File.CreateText(GetPath());
-        output.WriteLine("Time, Position, Rotation");
+
+        // Create new folder
+        Directory.CreateDirectory(GetFolderPath());
+        CreateCSV(DataToRecord.HeadMovement);
+        CreateCSV(DataToRecord.RatingVideo);
+    }
+
+    public string GetCSVPath(DataToRecord dataToRecord)
+    {
+        string Folder = "/Data/";
+        string File = "";
+
+        switch(dataToRecord)
+        {
+            case DataToRecord.HeadMovement:
+                File += "/HeadMovement";
+                break;
+            case DataToRecord.RatingVideo:
+                File += "/RatingVideo";
+                break;
+        }
+#if UNITY_EDITOR
+        return Application.dataPath + Folder + dataID + File + ".csv";
+#elif UNITY_STANDALONE_WIN
+        return Application.dataPath + Folder + dataID + File + ".csv";
+#endif
+    }
+
+    // Replace existing csv or Create new csv
+    private void CreateCSV(DataToRecord dataToRecord)
+    {
+        // Found same csv
+        if (File.Exists(GetCSVPath(dataToRecord)))
+        {
+            // Delete the csv
+            File.Delete(GetCSVPath(dataToRecord));
+        }
+
+        // Create new csv
+        StreamWriter output = File.CreateText(GetCSVPath(dataToRecord));
+        switch(dataToRecord)
+        {
+            case DataToRecord.HeadMovement:
+                output.WriteLine("Time, Position, Rotation");
+                break;
+            case DataToRecord.RatingVideo:
+                output.WriteLine("Video Url, Rating(-2 to 2)");
+                break;
+        }
         output.Close();
     }
 
-    string ChangeLetters(string str, char letter, char toBeLetter)
+    private string ChangeLetters(string str, char letter, char toBeLetter)
     {
         char[] ret = str.ToCharArray();
         for(int i = 0; i < ret.Length; ++i)
