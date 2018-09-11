@@ -1,0 +1,159 @@
+fileFormatVersion: 2
+guid: 7839851563adf0448b801b3f50a02b8a
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Plane_Floo
+    100002: StageLigh0
+    100004: StageLigh1
+    100006: StageLigh2
+    100008: StageLigh3
+    100010: StageLigh4
+    100012: StageLigh5
+    100014: StageLigh6
+    100016: StageLigh7
+    100018: StageLigh8
+    100020: StageLigh9
+    100022: STAGELIGHT
+    100024: StageLight
+    100026: //RootNode
+    400000: Plane_Floo
+    400002: StageLigh0
+    400004: StageLigh1
+    400006: StageLigh2
+    400008: StageLigh3
+    400010: StageLigh4
+    400012: StageLigh5
+    400014: StageLigh6
+    400016: StageLigh7
+    400018: StageLigh8
+    400020: StageLigh9
+    400022: STAGELIGHT
+    400024: StageLight
+    400026: //RootNode
+    2100000: plane_floor
+    2100002: StageLight_12_cl
+    2100004: StageLight_121
+    2100006: StageLight_122
+    2100008: StageLight_12_bl
+    2100010: StageLight_12_pl
+    2100012: StageLight_123
+    2300000: Plane_Floo
+    2300002: StageLigh0
+    2300004: StageLigh1
+    2300006: StageLigh2
+    2300008: StageLigh3
+    2300010: StageLigh4
+    2300012: StageLigh5
+    2300014: StageLigh6
+    2300016: StageLigh7
+    2300018: StageLigh8
+    2300020: StageLigh9
+    2300022: StageLight
+    3300000: Plane_Floo
+    3300002: StageLigh0
+    3300004: StageLigh1
+    3300006: StageLigh2
+    3300008: StageLigh3
+    3300010: StageLigh4
+    3300012: StageLigh5
+    3300014: StageLigh6
+    3300016: StageLigh7
+    3300018: StageLigh8
+    3300020: StageLigh9
+    3300022: StageLight
+    4300000: Plane_Floo
+    4300002: StageLight
+    4300004: StageLigh0
+    4300006: StageLigh1
+    4300008: StageLigh2
+    4300010: StageLigh3
+    4300012: StageLigh4
+    4300014: StageLigh5
+    4300016: StageLigh6
+    4300018: StageLigh7
+    4300020: StageLigh8
+    4300022: StageLigh9
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
