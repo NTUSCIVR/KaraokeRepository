@@ -23,6 +23,7 @@ public class DataCollector : MonoBehaviour
     float time = 0f;
     
     public GameObject user;
+    public string videoUrl;
 
     public enum DataToRecord
     {
@@ -57,6 +58,7 @@ public class DataCollector : MonoBehaviour
         }
 	}
 
+    // Finished input userId, proceed to input positionId
     public void ProceedToChoosePosition()
     {
         dataID = UserIdInputField.text;
@@ -64,6 +66,7 @@ public class DataCollector : MonoBehaviour
         PositionUI.SetActive(true);
     }
 
+    // Finished input positionId, proceed to input songId
     public void ProceedToChooseSong()
     {
         dataPositionID = PositionIdInputField.text;
@@ -71,6 +74,7 @@ public class DataCollector : MonoBehaviour
         PositionUI.SetActive(false);
     }
 
+    // Finished input songId, change scene to mainScene
     public void EnterRoom()
     {
         dataSongID = SongIdInputField.text;
@@ -78,6 +82,7 @@ public class DataCollector : MonoBehaviour
         SceneManager.LoadScene("MainScene");
     }
 
+    // Generate Data for Head Movement
     private string GenerateData()
     {
         string data = "";
@@ -173,6 +178,7 @@ public class DataCollector : MonoBehaviour
         output.Close();
     }
 
+    // Change "letter" in "str" to "toBeLetter"
     private string ChangeLetters(string str, char letter, char toBeLetter)
     {
         char[] ret = str.ToCharArray();

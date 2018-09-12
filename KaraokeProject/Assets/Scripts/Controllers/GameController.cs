@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 //manage the events that occurs in the application
 public class GameController : MonoBehaviour
@@ -8,6 +9,8 @@ public class GameController : MonoBehaviour
     public static GameController Instance;
     public GameObject cameraRig;
     public GameObject TV;
+    public Image BackgroundImage;
+    public float FadingRate = 0.15f;
 
     [Header("Video Name")]
     public string firstName;
@@ -43,6 +46,7 @@ public class GameController : MonoBehaviour
                 videoPlayer.url = "C:/KaraokeVideos/" + secondName;
                 break;
         }
+        DataCollector.Instance.videoUrl = videoPlayer.url;
         videoPlayer.Play();
 
         switch(PositionID)
@@ -60,15 +64,60 @@ public class GameController : MonoBehaviour
                 TV.transform.rotation = BottomTvTransform.rotation;
                 break;
         }
+        videoPlayer.loopPointReached += FinishedPlayingMV;
+
+        // Reset to invisible first
+        Color temp = BackgroundImage.GetComponent<Image>().color;
+        temp.a = 0.0f;
+        BackgroundImage.GetComponent<Image>().color = temp;
     }
-	
+
+    private Color Fade(Color color)
+    {
+        Color Temp = color;
+        if (Temp.a < 1.0f)
+        {
+            // Fade accoding to Fading Rate
+            Temp.a += FadingRate * Time.deltaTime;
+        }
+        else
+        {
+            // Once fully visible, change scene to endScene
+            Temp.a = 1.0f;
+            SceneManager.LoadScene("EndScene");
+        }
+        return Temp;
+    }
+
+    private void FinishedPlayingMV(VideoPlayer _videoPlayer)
+    {
+        _videoPlayer.Stop();
+    }
+
+    private void Restart()
+    {
+        SceneManager.LoadScene("StartScene");
+        Destroy(DataCollector.Instance.gameObject);
+    }
+
 	// Update is called once per frame
 	void Update ()
     {
+        // Finished playing, fade background sphere in
+        if(!videoPlayer.isPlaying)
+        {
+            BackgroundImage.GetComponent<Image>().color =
+                Fade(BackgroundImage.GetComponent<Image>().color);
+        }
+
         if(Input.GetKey(KeyCode.Space))
         {
-            SceneManager.LoadScene("StartScene");
-            Destroy(DataCollector.Instance.gameObject);
+            FinishedPlayingMV(videoPlayer);
+        }
+
+        if (Input.GetKey(KeyCode.R))
+        {
+            Restart();
         }
     }
 }
