@@ -92,6 +92,7 @@ public class GameController : MonoBehaviour
     private void FinishedPlayingMV(VideoPlayer _videoPlayer)
     {
         _videoPlayer.Stop();
+        DataCollector.Instance.startRecording = false;
     }
 
     private void Restart()
