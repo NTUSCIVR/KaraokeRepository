@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+// Automatically creates BoxCollider component of the Object size and add onto itself
 [RequireComponent(typeof(RectTransform))]
 public class UIItem : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class UIItem : MonoBehaviour
             boxCollider = gameObject.AddComponent<BoxCollider>();
         }
 
+        // Fit size
         boxCollider.size = rectTransform.sizeDelta;
     }
 }

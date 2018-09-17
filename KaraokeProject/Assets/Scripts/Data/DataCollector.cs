@@ -8,10 +8,6 @@ public class DataCollector : MonoBehaviour
     public InputField UserIdInputField;
     public string dataID = "";
 
-    public GameObject SongUI;
-    public InputField SongIdInputField;
-    public string dataSongID = "";
-
     public GameObject PositionUI;
     public InputField PositionIdInputField;
     public string dataPositionID = "";
@@ -68,20 +64,10 @@ public class DataCollector : MonoBehaviour
         PositionIdInputField.Select();
     }
 
-    // Finished input positionId, proceed to input songId
-    public void ProceedToChooseSong()
-    {
-        dataPositionID = PositionIdInputField.text;
-		EnterRoom();
-        //SongUI.SetActive(true);
-        //PositionUI.SetActive(false);
-        //SongIdInputField.Select();
-    }
-
-    // Finished input songId, change scene to mainScene
+    // Finished input positionId, change scene to mainScene
     public void EnterRoom()
     {
-        //dataSongID = SongIdInputField.text;
+        dataPositionID = PositionIdInputField.text;
         startRecording = true;
         SceneManager.LoadScene("MainScene");
     }

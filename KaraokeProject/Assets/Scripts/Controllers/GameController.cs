@@ -12,12 +12,8 @@ public class GameController : MonoBehaviour
     public GameObject cameraRig;
     public GameObject TV;
     public Image BackgroundImage;
-    public float FadingRate = 0.15f;
+    public float FadingRate = 0.3f;
     public GameObject Controls;
-
-    [Header("Video Name")]
-    public string firstName;
-    public string secondName;
 
     [Header("TV Position")]
     public Transform TopTvTransform;
@@ -28,7 +24,6 @@ public class GameController : MonoBehaviour
 
     [HideInInspector]
     public VideoPlayer videoPlayer;
-    private string SongID;
     private string PositionID;
     private List<string> videoUrls;
     private List<string> videoNames;
@@ -45,7 +40,6 @@ public class GameController : MonoBehaviour
         {
             //find the steamvr eye and assign it to data collector
             DataCollector.Instance.user = FindObjectOfType<SteamVR_Camera>().gameObject;
-            //SongID = DataCollector.Instance.dataSongID;
             PositionID = DataCollector.Instance.dataPositionID;
         }
 		
@@ -78,11 +72,15 @@ public class GameController : MonoBehaviour
         foreach (var file in directory.GetFiles("*.mp4", SearchOption.AllDirectories))
         {
             videoUrls.Add(directory.FullName + file.Name);
+            // Get the Name of videos
             videoNames.Add(file.Name.Remove(file.Name.Length - "Official MV.mp4".Length));
         }
         videoUrls.TrimExcess();
         videoNames.TrimExcess();
+        
+        // Sets default songTitle
 		SelectSong("");
+        // Allow Controls
         Controls.SetActive(true);
     }
 
@@ -118,19 +116,23 @@ public class GameController : MonoBehaviour
 		// Save the url down for Questionnaire to Record
         DataCollector.Instance.videoUrl = videoPlayer.url;
 		
-		// Hide songTitle and Controls
+		// Hide songTitle, TV Background and Controls
 		songTitle.gameObject.SetActive(false);
 		songPanel.SetActive(false);
 		Controls.SetActive(false);
 		
 		// Play the song
         videoPlayer.Play();
+
+        // Start Animation(TV Movements) if Anim_Clip is set
 		if(!Anim_Clip.Equals(""))
 		{
 			TV_anim.Play(Anim_Clip);
 		}
     }
 
+    // 1,2,3 Loads TV Fixed Position & Rotation
+    // 4,5,6,7 Allows TV Movements(Animation)
     private void LoadTVPosition()
     {
         switch (PositionID)
@@ -185,8 +187,20 @@ public class GameController : MonoBehaviour
 
     private void FinishedPlayingMV(VideoPlayer _videoPlayer)
     {
+        // Stop Video player
         _videoPlayer.Stop();
-		songPanel.SetActive(true);
+
+        // Stop TV Movement
+        TV_anim.StopPlayback();
+        
+        // Reset TV Position & Rotation to Center
+        TV.transform.position = CenterTvTransform.position;
+        TV.transform.rotation = CenterTvTransform.rotation;
+        
+        // Set TV Background visible
+        songPanel.SetActive(true);
+        
+        // Stop recording Head Movement
         DataCollector.Instance.startRecording = false;
     }
 
