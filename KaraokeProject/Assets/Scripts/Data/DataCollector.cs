@@ -40,6 +40,7 @@ public class DataCollector : MonoBehaviour
     private void Start ()
     {
         Instance = this;
+		UserIdInputField.Select();
     }
 
     // Update is called once per frame
@@ -64,20 +65,23 @@ public class DataCollector : MonoBehaviour
         dataID = UserIdInputField.text;
         CreateFolder();
         PositionUI.SetActive(true);
+        PositionIdInputField.Select();
     }
 
     // Finished input positionId, proceed to input songId
     public void ProceedToChooseSong()
     {
         dataPositionID = PositionIdInputField.text;
-        SongUI.SetActive(true);
-        PositionUI.SetActive(false);
+		EnterRoom();
+        //SongUI.SetActive(true);
+        //PositionUI.SetActive(false);
+        //SongIdInputField.Select();
     }
 
     // Finished input songId, change scene to mainScene
     public void EnterRoom()
     {
-        dataSongID = SongIdInputField.text;
+        //dataSongID = SongIdInputField.text;
         startRecording = true;
         SceneManager.LoadScene("MainScene");
     }

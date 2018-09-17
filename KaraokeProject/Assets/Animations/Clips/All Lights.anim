@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: All StageLights
+  m_Name: All Lights
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -18,7 +18,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 98.677, z: -179.99998}
+        value: {x: 154.319, y: 52.267998, z: 11.966995}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -27,34 +27,34 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: 0, y: 35.086002, z: -180.00002}
-        inSlope: {x: 0, y: -96.74151, z: 0}
-        outSlope: {x: 0, y: -96.74151, z: 0}
+        value: {x: 150.87, y: 108.708, z: 36.194992}
+        inSlope: {x: -6.89801, y: 73.51401, z: 48.455994}
+        outSlope: {x: -6.89801, y: 73.51401, z: 48.455994}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 2
-        value: {x: 0, y: -94.80601, z: -180.00002}
-        inSlope: {x: 0, y: -117.011, z: 0}
-        outSlope: {x: 0, y: -117.011, z: 0}
+        value: {x: 114.752, y: 199.296, z: 171.384}
+        inSlope: {x: 0, y: 119.33301, z: 270.37802}
+        outSlope: {x: 0, y: 119.33301, z: 270.37802}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 3
-        value: {x: 0, y: -198.93599, z: -180.00002}
-        inSlope: {x: 0, y: -80.53349, z: 0}
-        outSlope: {x: 0, y: -80.53349, z: 0}
+        value: {x: 139.324, y: 347.37402, z: 639.107}
+        inSlope: {x: 19.267502, y: 105.74699, z: 107.47393}
+        outSlope: {x: 19.267502, y: 105.74699, z: 107.47393}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 4
-        value: {x: 0, y: -255.87299, z: -179.99998}
+        value: {x: 153.287, y: 410.78998, z: 692.844}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -64,13 +64,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: RedStageLight/Base Joint
+    path: GreenSpotLight
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 180.07799, z: -179.99998}
+        value: {x: 154.124, y: 129.159, z: 105.24799}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -79,34 +79,34 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: 0, y: 120.728004, z: -180.00002}
-        inSlope: {x: 0, y: -78.95749, z: 0}
-        outSlope: {x: 0, y: -78.95749, z: 0}
+        value: {x: 141.17099, y: 185.029, z: 127.125}
+        inSlope: {x: -19.182, y: 101.0455, z: 43.754013}
+        outSlope: {x: -19.182, y: 101.0455, z: 43.754013}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 2
-        value: {x: 0, y: 22.163, z: -180.00002}
-        inSlope: {x: 0, y: -114.76601, z: 0}
-        outSlope: {x: 0, y: -114.76601, z: 0}
+        value: {x: 115.759995, y: 331.25, z: 219.4}
+        inSlope: {x: 0, y: 125.723, z: 64.9115}
+        outSlope: {x: 0, y: 125.723, z: 64.9115}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 3
-        value: {x: 0, y: -108.80401, z: -180.00002}
-        inSlope: {x: 0, y: -101.770996, z: 0}
-        outSlope: {x: 0, y: -101.770996, z: 0}
+        value: {x: 142.82599, y: 436.475, z: 256.948}
+        inSlope: {x: 19.066505, y: 79.4025, z: 26.638504}
+        outSlope: {x: 19.066505, y: 79.4025, z: 26.638504}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 4
-        value: {x: 0, y: -181.379, z: -179.99998}
+        value: {x: 153.893, y: 490.055, z: 272.677}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -116,13 +116,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: GreenStageLight/Base Joint
+    path: RedSpotLight
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 98.677, z: -179.99998}
+        value: {x: 30.298002, y: 127.72301, z: 3.6100001}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -131,34 +131,34 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: 0, y: 28.706001, z: -180.00002}
-        inSlope: {x: 0, y: -92.306, z: 0}
-        outSlope: {x: 0, y: -92.306, z: 0}
+        value: {x: 34.884003, y: 209.187, z: 41.086002}
+        inSlope: {x: 9.172001, y: 107.846, z: 52.490997}
+        outSlope: {x: 9.172001, y: 107.846, z: 52.490997}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 2
-        value: {x: 0, y: -85.935005, z: -180.00002}
-        inSlope: {x: 0, y: -112.62349, z: 0}
-        outSlope: {x: 0, y: -112.62349, z: 0}
+        value: {x: 64.514, y: 343.415, z: 108.592}
+        inSlope: {x: 0, y: 113.9575, z: 131.6785}
+        outSlope: {x: 0, y: 113.9575, z: 131.6785}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 3
-        value: {x: 0, y: -196.54099, z: -180.00002}
-        inSlope: {x: 0, y: -84.81549, z: 0}
-        outSlope: {x: 0, y: -84.81549, z: 0}
+        value: {x: 38.825, y: 437.102, z: 304.443}
+        inSlope: {x: -17.897999, y: 74.04649, z: 42.598003}
+        outSlope: {x: -17.897999, y: 74.04649, z: 42.598003}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 4
-        value: {x: 0, y: -255.566, z: -179.99998}
+        value: {x: 28.718, y: 491.508, z: 325.742}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -168,13 +168,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: BlueStageLight/Base Joint
+    path: BlueSpotLight
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 98.677, z: -179.99998}
+        value: {x: 152.288, y: -131.347, z: -81.151}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -183,34 +183,34 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: 0, y: 45.183002, z: -180.00002}
-        inSlope: {x: 0, y: -84.109505, z: 0}
-        outSlope: {x: 0, y: -84.109505, z: 0}
+        value: {x: 148.13899, y: -71.94501, z: -57.147003}
+        inSlope: {x: -8.298004, y: 88.27, z: 48.007996}
+        outSlope: {x: -8.298004, y: 88.27, z: 48.007996}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 2
-        value: {x: 0, y: -69.542, z: -180.00002}
-        inSlope: {x: 0, y: -113.871506, z: 0}
-        outSlope: {x: 0, y: -113.871506, z: 0}
+        value: {x: 122.381, y: 45.192993, z: 27.56099}
+        inSlope: {x: 0, y: 119.4375, z: 74.4535}
+        outSlope: {x: 0, y: 119.4375, z: 74.4535}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 3
-        value: {x: 0, y: -182.56, z: -180.00002}
-        inSlope: {x: 0, y: -92.57201, z: 0}
-        outSlope: {x: 0, y: -92.57201, z: 0}
+        value: {x: 142.179, y: 166.93, z: 91.759995}
+        inSlope: {x: 15.568504, y: 91.90401, z: 46.286003}
+        outSlope: {x: 15.568504, y: 91.90401, z: 46.286003}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 4
-        value: {x: 0, y: -254.686, z: -179.99998}
+        value: {x: 153.518, y: 229.001, z: 120.132996}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -220,7 +220,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: PurpleStageLight/Base Joint
+    path: PurpleSpotLight
   m_PositionCurves: []
   m_ScaleCurves: []
   m_FloatCurves: []
@@ -233,28 +233,28 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1554873756
+      path: 385934222
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2824706093
+      path: 874612634
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3359574450
+      path: 561867128
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1567126205
+      path: 3261047323
       attribute: 4
       script: {fileID: 0}
       typeID: 4
@@ -271,8 +271,8 @@ AnimationClip:
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 0
-    m_LoopBlend: 0
+    m_LoopTime: 1
+    m_LoopBlend: 1
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
     m_LoopBlendPositionXZ: 0
@@ -287,7 +287,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: 154.319
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -296,16 +296,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
+        value: 150.87
+        inSlope: -6.89801
+        outSlope: -6.89801
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 2
-        value: 0
+        value: 114.752
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -314,16 +314,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 3
-        value: 0
-        inSlope: 0
-        outSlope: 0
+        value: 139.324
+        inSlope: 19.267502
+        outSlope: 19.267502
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4
-        value: 0
+        value: 153.287
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -334,7 +334,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: RedStageLight/Base Joint
+    path: GreenSpotLight
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -342,7 +342,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 98.677
+        value: 52.267998
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -351,34 +351,34 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 35.086002
-        inSlope: -96.74151
-        outSlope: -96.74151
+        value: 108.708
+        inSlope: 73.51401
+        outSlope: 73.51401
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 2
-        value: -94.80601
-        inSlope: -117.011
-        outSlope: -117.011
+        value: 199.296
+        inSlope: 119.33301
+        outSlope: 119.33301
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 3
-        value: -198.93599
-        inSlope: -80.53349
-        outSlope: -80.53349
+        value: 347.37402
+        inSlope: 105.74699
+        outSlope: 105.74699
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4
-        value: -255.87299
+        value: 410.78998
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -389,7 +389,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: RedStageLight/Base Joint
+    path: GreenSpotLight
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -397,7 +397,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -179.99998
+        value: 11.966995
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -406,34 +406,34 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: -180.00002
-        inSlope: 0
-        outSlope: 0
+        value: 36.194992
+        inSlope: 48.455994
+        outSlope: 48.455994
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 2
-        value: -180.00002
-        inSlope: 0
-        outSlope: 0
+        value: 171.384
+        inSlope: 270.37802
+        outSlope: 270.37802
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 3
-        value: -180.00002
-        inSlope: 0
-        outSlope: 0
+        value: 639.107
+        inSlope: 107.47393
+        outSlope: 107.47393
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4
-        value: -179.99998
+        value: 692.844
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -444,7 +444,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: RedStageLight/Base Joint
+    path: GreenSpotLight
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -452,7 +452,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: 154.124
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -461,16 +461,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
+        value: 141.17099
+        inSlope: -19.182
+        outSlope: -19.182
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 2
-        value: 0
+        value: 115.759995
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -479,16 +479,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 3
-        value: 0
-        inSlope: 0
-        outSlope: 0
+        value: 142.82599
+        inSlope: 19.066505
+        outSlope: 19.066505
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4
-        value: 0
+        value: 153.893
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -499,7 +499,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: GreenStageLight/Base Joint
+    path: RedSpotLight
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -507,7 +507,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 180.07799
+        value: 129.159
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -516,34 +516,34 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 120.728004
-        inSlope: -78.95749
-        outSlope: -78.95749
+        value: 185.029
+        inSlope: 101.0455
+        outSlope: 101.0455
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 2
-        value: 22.163
-        inSlope: -114.76601
-        outSlope: -114.76601
+        value: 331.25
+        inSlope: 125.723
+        outSlope: 125.723
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 3
-        value: -108.80401
-        inSlope: -101.770996
-        outSlope: -101.770996
+        value: 436.475
+        inSlope: 79.4025
+        outSlope: 79.4025
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4
-        value: -181.379
+        value: 490.055
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -554,7 +554,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: GreenStageLight/Base Joint
+    path: RedSpotLight
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -562,7 +562,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -179.99998
+        value: 105.24799
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -571,34 +571,34 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: -180.00002
-        inSlope: 0
-        outSlope: 0
+        value: 127.125
+        inSlope: 43.754013
+        outSlope: 43.754013
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 2
-        value: -180.00002
-        inSlope: 0
-        outSlope: 0
+        value: 219.4
+        inSlope: 64.9115
+        outSlope: 64.9115
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 3
-        value: -180.00002
-        inSlope: 0
-        outSlope: 0
+        value: 256.948
+        inSlope: 26.638504
+        outSlope: 26.638504
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4
-        value: -179.99998
+        value: 272.677
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -609,7 +609,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: GreenStageLight/Base Joint
+    path: RedSpotLight
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -617,7 +617,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: 30.298002
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -626,16 +626,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
+        value: 34.884003
+        inSlope: 9.172001
+        outSlope: 9.172001
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 2
-        value: 0
+        value: 64.514
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -644,16 +644,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 3
-        value: 0
-        inSlope: 0
-        outSlope: 0
+        value: 38.825
+        inSlope: -17.897999
+        outSlope: -17.897999
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4
-        value: 0
+        value: 28.718
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -664,7 +664,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: BlueStageLight/Base Joint
+    path: BlueSpotLight
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -672,7 +672,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 98.677
+        value: 127.72301
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -681,34 +681,34 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 28.706001
-        inSlope: -92.306
-        outSlope: -92.306
+        value: 209.187
+        inSlope: 107.846
+        outSlope: 107.846
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 2
-        value: -85.935005
-        inSlope: -112.62349
-        outSlope: -112.62349
+        value: 343.415
+        inSlope: 113.9575
+        outSlope: 113.9575
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 3
-        value: -196.54099
-        inSlope: -84.81549
-        outSlope: -84.81549
+        value: 437.102
+        inSlope: 74.04649
+        outSlope: 74.04649
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4
-        value: -255.566
+        value: 491.508
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -719,7 +719,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: BlueStageLight/Base Joint
+    path: BlueSpotLight
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -727,7 +727,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -179.99998
+        value: 3.6100001
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -736,34 +736,34 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: -180.00002
-        inSlope: 0
-        outSlope: 0
+        value: 41.086002
+        inSlope: 52.490997
+        outSlope: 52.490997
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 2
-        value: -180.00002
-        inSlope: 0
-        outSlope: 0
+        value: 108.592
+        inSlope: 131.6785
+        outSlope: 131.6785
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 3
-        value: -180.00002
-        inSlope: 0
-        outSlope: 0
+        value: 304.443
+        inSlope: 42.598003
+        outSlope: 42.598003
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4
-        value: -179.99998
+        value: 325.742
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -774,7 +774,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: BlueStageLight/Base Joint
+    path: BlueSpotLight
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -782,7 +782,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: 152.288
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -791,16 +791,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
+        value: 148.13899
+        inSlope: -8.298004
+        outSlope: -8.298004
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 2
-        value: 0
+        value: 122.381
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -809,16 +809,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 3
-        value: 0
-        inSlope: 0
-        outSlope: 0
+        value: 142.179
+        inSlope: 15.568504
+        outSlope: 15.568504
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4
-        value: 0
+        value: 153.518
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -829,7 +829,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: PurpleStageLight/Base Joint
+    path: PurpleSpotLight
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -837,7 +837,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 98.677
+        value: -131.347
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -846,34 +846,34 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 45.183002
-        inSlope: -84.109505
-        outSlope: -84.109505
+        value: -71.94501
+        inSlope: 88.27
+        outSlope: 88.27
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 2
-        value: -69.542
-        inSlope: -113.871506
-        outSlope: -113.871506
+        value: 45.192993
+        inSlope: 119.4375
+        outSlope: 119.4375
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 3
-        value: -182.56
-        inSlope: -92.57201
-        outSlope: -92.57201
+        value: 166.93
+        inSlope: 91.90401
+        outSlope: 91.90401
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4
-        value: -254.686
+        value: 229.001
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -884,7 +884,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: PurpleStageLight/Base Joint
+    path: PurpleSpotLight
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -892,7 +892,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -179.99998
+        value: -81.151
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -901,34 +901,34 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: -180.00002
-        inSlope: 0
-        outSlope: 0
+        value: -57.147003
+        inSlope: 48.007996
+        outSlope: 48.007996
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 2
-        value: -180.00002
-        inSlope: 0
-        outSlope: 0
+        value: 27.56099
+        inSlope: 74.4535
+        outSlope: 74.4535
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 3
-        value: -180.00002
-        inSlope: 0
-        outSlope: 0
+        value: 91.759995
+        inSlope: 46.286003
+        outSlope: 46.286003
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4
-        value: -179.99998
+        value: 120.132996
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -939,7 +939,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: PurpleStageLight/Base Joint
+    path: PurpleSpotLight
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves:
@@ -950,7 +950,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: RedStageLight/Base Joint
+    path: BlueSpotLight
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -960,7 +960,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: RedStageLight/Base Joint
+    path: BlueSpotLight
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -970,27 +970,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: RedStageLight/Base Joint
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: GreenStageLight/Base Joint
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: GreenStageLight/Base Joint
+    path: BlueSpotLight
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1000,17 +980,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: GreenStageLight/Base Joint
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: BlueStageLight/Base Joint
+    path: PurpleSpotLight
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1020,17 +990,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: BlueStageLight/Base Joint
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: BlueStageLight/Base Joint
+    path: PurpleSpotLight
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1040,17 +1000,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: PurpleStageLight/Base Joint
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: PurpleStageLight/Base Joint
+    path: PurpleSpotLight
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1060,7 +1010,57 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: PurpleStageLight/Base Joint
+    path: GreenSpotLight
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: GreenSpotLight
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: GreenSpotLight
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: RedSpotLight
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: RedSpotLight
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: RedSpotLight
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0
