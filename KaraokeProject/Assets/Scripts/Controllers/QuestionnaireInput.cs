@@ -3,12 +3,13 @@ using System.IO;
 
 public class QuestionnaireInput : MonoBehaviour
 {
-    public GameObject Ending;
-
     // Questionnaire objects
-    public GameObject QuestionnaireObject;
+    [Header("Under [CameraRig] -> Camera(head) -> Camera(eye) -> Canvas")]
+    public GameObject Questionnaire;
     private DataCollector dataCollector;
     private string videoUrl;
+
+    public GameObject Ending;
 
     // Use this for initialization
     private void Start()
@@ -28,7 +29,7 @@ public class QuestionnaireInput : MonoBehaviour
         sw.Close();
 
         // Show Ending
-        QuestionnaireObject.SetActive(false);
+        Questionnaire.SetActive(false);
         Ending.SetActive(true);
     }
 }

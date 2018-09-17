@@ -4,16 +4,11 @@ using UnityEngine.UI;
 public class UiFadeOut : MonoBehaviour
 {
     // Rate of Fading out
+    [Tooltip("Default: 0.15f")]
     public float FadingRate = 0.15f;
     
-    // Reference to Instruction and its child/components
-    public GameObject Instruction;
-    private Image Instruc_Panel;
-    private Text Instruc_Title;
-    private Image Instruc_Image;
-    private Text Instruc_Text;
-
     // Reference to Questionnaire
+    [Header("Under [CameraRig] -> Camera(head) -> Camera(eye) -> Canvas")]
     public GameObject Questionnaire;
 
     // Reference to Ending and its child/components
@@ -24,21 +19,6 @@ public class UiFadeOut : MonoBehaviour
     // Use this for initialization
     private void Start ()
     {
-        // Ensure there's Instruction to set
-        if (!Instruction)
-        {
-            Debug.LogError("Instructions GameObject not found.");
-            return;
-        }
-        else
-        {
-            // Get the Components
-            Instruc_Panel = Instruction.transform.Find("Instructions Panel").GetComponent<Image>();
-            Instruc_Title = Instruction.transform.Find("Instructions Panel").Find("Title Text").GetComponent<Text>();
-            Instruc_Image = Instruction.transform.Find("Instructions Panel").Find("Controls Image").GetComponent<Image>();
-            Instruc_Text = Instruction.transform.Find("Instructions Panel").Find("Content Text").GetComponent<Text>();
-        }
-
         // Ensure there's Ending to set
         if (!Ending)
         {
@@ -71,32 +51,8 @@ public class UiFadeOut : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        // When Insturction is active
-        if(Instruction.activeSelf)
-        {
-            // Proceed to Fade
-            Instruc_Panel.color = Fade(Instruc_Panel.color);
-            Instruc_Title.color = Fade(Instruc_Title.color);
-            Instruc_Image.color = Fade(Instruc_Image.color);
-            Instruc_Text.color = Fade(Instruc_Text.color);
-
-            // When finish fading out
-            if (Instruc_Panel.color.a == 0.0f &&
-                Instruc_Title.color.a == 0.0f && Instruc_Image.color.a == 0.0f && Instruc_Text.color.a == 0.0f)
-            {
-                Instruction.SetActive(false);
-                Questionnaire.SetActive(true);
-            }
-
-            // Skip Insturction
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Instruction.SetActive(false);
-                Questionnaire.SetActive(true);
-            }
-        }
         // When Ending is active
-        else if (Ending.activeSelf)
+        if (Ending.activeSelf)
         {
             // Proceed to Fade
             Ending_Panel.color = Fade(Ending_Panel.color);

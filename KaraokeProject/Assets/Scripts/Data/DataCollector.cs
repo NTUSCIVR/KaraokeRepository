@@ -5,21 +5,29 @@ using UnityEngine.UI;
 
 public class DataCollector : MonoBehaviour
 {
-    public InputField UserIdInputField;
-    public string dataID = "";
-
-    public GameObject PositionUI;
-    public InputField PositionIdInputField;
-    public string dataPositionID = "";
-
     public static DataCollector Instance;
 
-    public bool startRecording = false;
+    [Tooltip("Default: 1.0f")]
     public float dataRecordInterval = 1f;
-    float time = 0f;
     
+    [Header("Under Canvas")]
+    public InputField UserIdInputField;
+
+    public GameObject PositionUI;
+    [Tooltip("Under PositionUI")]
+    public InputField PositionIdInputField;
+
+    [HideInInspector]
+    public string dataID = "";
+    [HideInInspector]
+    public string dataPositionID = "";
+    [HideInInspector]
+    public bool startRecording = false;
+    [HideInInspector]
     public GameObject user;
+    [HideInInspector]
     public string videoUrl;
+    private float time = 0f;
 
     public enum DataToRecord
     {

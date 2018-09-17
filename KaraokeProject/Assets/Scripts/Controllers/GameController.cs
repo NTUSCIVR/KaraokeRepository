@@ -9,16 +9,23 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public static GameController Instance;
+    [Tooltip("[CameraRig]")]
     public GameObject cameraRig;
-    public GameObject TV;
+    [Tooltip("Under [CameraRig] -> Camera(head) -> Camera(eye) -> Canvas")]
     public Image BackgroundImage;
+
+    [Tooltip("Default: 0.3f")]
     public float FadingRate = 0.3f;
+    [Tooltip("TVCanvas")]
     public GameObject Controls;
 
-    [Header("TV Position")]
+    [Header("TV Transforms")]
     public Transform TopTvTransform;
     public Transform CenterTvTransform;
     public Transform BottomTvTransform;
+
+    [Header("Under Environment")]
+    public GameObject TV;
     public GameObject Track_Vertical;
     public GameObject Track_Horizontal;
 
