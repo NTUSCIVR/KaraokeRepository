@@ -23,7 +23,7 @@ public class QuestionnaireInput : MonoBehaviour
 
     public void RecordData(int ChoiceIndex)
     {
-        StreamWriter sw = File.AppendText(dataCollector.GetCSVPath(DataCollector.DataToRecord.RatingVideo));
+        StreamWriter sw = File.AppendText(dataCollector.GetCSVPath(DataCollector.DataToRecord.RatingVideo, dataCollector.currentFolderPath));
         string rating = ChoiceIndex.ToString();
         sw.WriteLine(videoUrl + "," + rating);
         sw.Close();

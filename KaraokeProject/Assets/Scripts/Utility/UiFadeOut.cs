@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class UiFadeOut : MonoBehaviour
 {
     // Rate of Fading out
-    [Tooltip("Default: 0.15f")]
+    [Tooltip("Rate of Fading. Higher means fade out faster;Lower means fade out slower. Default: 0.15f")]
     public float FadingRate = 0.15f;
     
     // Reference to Questionnaire

@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour
     [Tooltip("Under [CameraRig] -> Camera(head) -> Camera(eye) -> Canvas")]
     public Image BackgroundImage;
 
-    [Tooltip("Default: 0.3f")]
+    [Tooltip("Rate of Fading. Higher means fade out faster;Lower means fade out slower. Default: 0.3f")]
     public float FadingRate = 0.3f;
     [Tooltip("TVCanvas")]
     public GameObject Controls;
