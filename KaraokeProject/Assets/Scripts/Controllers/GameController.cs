@@ -1,14 +1,35 @@
-﻿using System.IO;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Video;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
+﻿//--------------------------------------------------------------------------------
+/*
+ * This Script is used for playing song in Television Screen in Main Scene with User Input.
+ * It also Change Scene to End Scene when song has finished playing.
+ * Allow Inputs to : Skip song,
+ *                   Restart(Load StartScene and Input User ID and position choice again)
+ * 
+ * Used in Main Scene, attached to Empty GameObject "GameController"
+ * Require 1 Image variable, 5 GameObject variable : [CameraRig], Controls, TV, Vertical/Horizontal Tracks, and 3 Transform variables : Top, Center, Bottom.
+ * Where Image can be found as "BackgroundImage" under Canvas in Camera(eye) of [CameraRig].
+ * TV can be found as "TV set N010614" under Environment.
+ * Tracks can be found as "Track_X", where "X" is "Vertical/Horizontal" under Environment.
+ * Transforms can be found under TV Transforms.
+ * Controls can be found as "TVCanvas".
+ * [CameraRig], Environment, TV Transforms, TVCanvas can be found in Hierarchy.
+ * Among the variables, only the Tracks and Controls's GameObject no need to be active.
+ */
+//--------------------------------------------------------------------------------
 
-//manage the events that occurs in the application
+using System.IO; // For DirectoryInfo, SearchOption
+using UnityEngine;  // Default Unity Script (MonoBehaviour, GameObject, Transform, Animator, Header, Tooltip, HideInInspector, Time, FindObjectOfType, Color, Input, KeyCode, GetComponent)
+using UnityEngine.UI; // For Image, Text
+using UnityEngine.Video; // For VideoPlayer
+using System.Collections.Generic; // For List<>
+using UnityEngine.SceneManagement; // For SceneManager
+
+// Manage the events that occurs in the application
 public class GameController : MonoBehaviour
 {
+    // For other scripts to access GameController
     public static GameController Instance;
+
     [Tooltip("[CameraRig]")]
     public GameObject cameraRig;
     [Tooltip("Under [CameraRig] -> Camera(head) -> Camera(eye) -> Canvas")]
@@ -29,24 +50,33 @@ public class GameController : MonoBehaviour
     public GameObject Track_Vertical;
     public GameObject Track_Horizontal;
 
+    // For Choosing/Playing song
     [HideInInspector]
     public VideoPlayer videoPlayer;
-    private string PositionID;
     private List<string> videoUrls;
     private List<string> videoNames;
     private Text songTitle;
 	private GameObject songPanel;
-	private Animator TV_anim;
-	private string Anim_Clip = "";
     private int songIndex = 0;
 
+    // For Positioning/Moving Television Screen
+    private string PositionID;
+	private Animator TV_anim;
+	private string Anim_Clip = "";
+
+    // Runs before Start()
     private void Awake()
     {
+        // Set this instance of GameController to allow other scripts to access its variables and data
         Instance = this;
+
+        // If DataCollector is alive
         if (DataCollector.Instance != null)
         {
-            //find the steamvr eye and assign it to data collector
+            // Find the steamvr eye and assign it to data collector
             DataCollector.Instance.user = FindObjectOfType<SteamVR_Camera>().gameObject;
+
+            // Applies Position ID - For Positioning/Moving TV Screen
             PositionID = DataCollector.Instance.dataPositionID;
         }
 		
@@ -58,11 +88,11 @@ public class GameController : MonoBehaviour
         videoUrls = new List<string>();
         videoNames = new List<string>();
 		
-		// Initialise TV
+		// Initialise TV - Load Songs and Positioning/Moving TV Screen
 		LoadSongs();
         LoadTVPosition();
 
-        // Reset to invisible first
+        // Reset to invisible first - Prepare for Fading to End Scene
         Color temp = BackgroundImage.GetComponent<Image>().color;
         temp.a = 0.0f;
         BackgroundImage.GetComponent<Image>().color = temp;
@@ -71,22 +101,27 @@ public class GameController : MonoBehaviour
         videoPlayer.loopPointReached += FinishedPlayingMV;
     }
 
+    // Load videos from C:/KaraokeVideos/
     private void LoadSongs()
     {
         DirectoryInfo directory = new DirectoryInfo(@"C:\KaraokeVideos\");
 
-        // Load .mp4 videos from C:\KaraokeVideos\ and add into Url list
+        // Loads every mp4 file path into List of string, videoUrls
         foreach (var file in directory.GetFiles("*.mp4", SearchOption.AllDirectories))
         {
             videoUrls.Add(directory.FullName + file.Name);
-            // Get the Name of videos
+
+            // Get the Name of videos - Prepare for Song Selection Screen
             videoNames.Add(file.Name.Remove(file.Name.Length - "Official MV.mp4".Length));
         }
+
+        // Trim Excess to prevent extra space in List
         videoUrls.TrimExcess();
         videoNames.TrimExcess();
         
         // Sets default songTitle
 		SelectSong("");
+
         // Allow Controls
         Controls.SetActive(true);
     }
@@ -111,6 +146,8 @@ public class GameController : MonoBehaviour
 			default:
 				break;
         }
+
+        // Update Text Shown on TV Screen based on Index in VideoNames list
 		songTitle.text = videoNames[songIndex];
     }
 
@@ -138,8 +175,9 @@ public class GameController : MonoBehaviour
 		}
     }
 
-    // 1,2,3 Loads TV Fixed Position & Rotation
-    // 4,5,6,7 Allows TV Movements(Animation)
+    // Applies Setting for TV Screen Position/Movement based on User Input in Start Scene
+    // 1 / 2 / 3 Loads TV Fixed Position & Rotation
+    // 4 / 5 / 6 / 7 Allows TV Movements(Animation), also shows respective Tracks
     private void LoadTVPosition()
     {
         switch (PositionID)
@@ -175,6 +213,8 @@ public class GameController : MonoBehaviour
         }
     }
 
+    // Returns increased Alpha Component of Color in Background Image
+    // Once Alpha reach 1f, Change Scene to End Scene
     private Color Fade(Color color)
     {
         Color Temp = color;
@@ -192,6 +232,9 @@ public class GameController : MonoBehaviour
         return Temp;
     }
 
+    // Stops Playing song, TV Movement, Recording Head Movement
+    // Reset TV Position & Rotation to Center
+    // Show TV Background
     private void FinishedPlayingMV(VideoPlayer _videoPlayer)
     {
         // Stop Video player
@@ -211,9 +254,12 @@ public class GameController : MonoBehaviour
         DataCollector.Instance.startRecording = false;
     }
 
+    // Loads StartScene
     private void Restart()
     {
         SceneManager.LoadScene("StartScene");
+
+        // Destroy current DataCollector Instance, as StartScene will have its new instance of DataCollector
         Destroy(DataCollector.Instance.gameObject);
     }
 
@@ -227,13 +273,13 @@ public class GameController : MonoBehaviour
                 Fade(BackgroundImage.GetComponent<Image>().color);
         }
 
-        // Skip video
-        if(Input.GetKey(KeyCode.Space))
+        // Proceed to Skip video if 'Spacebar' is pressed
+        if (Input.GetKey(KeyCode.Space))
         {
             FinishedPlayingMV(videoPlayer);
         }
 
-        // Restart from start scene
+        // Proceed to Restart if 'R' is pressed
         if (Input.GetKey(KeyCode.R))
         {
             Restart();

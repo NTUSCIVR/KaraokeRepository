@@ -1,22 +1,27 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿//--------------------------------------------------------------------------------
+/*
+ * This Script is used to Fade out Ending Canvas.
+ * Allow Input to : Skip Ending.
+ * 
+ * Used in End Scene, attached to "Script GameObject" in Hierarchy.
+ */
+//--------------------------------------------------------------------------------
+
+using UnityEngine;  // Default Unity Script (MonoBehaviour, GameObject, Header, Tooltip, Debug, Color, Time, Input, KeyCode)
+using UnityEngine.UI; // For Image, Text
 
 public class UiFadeOut : MonoBehaviour
 {
     // Rate of Fading out
     [Tooltip("Rate of Fading. Higher means fade out faster;Lower means fade out slower. Default: 0.15f")]
     public float FadingRate = 0.15f;
-    
-    // Reference to Questionnaire
-    [Header("Under [CameraRig] -> Camera(head) -> Camera(eye) -> Canvas")]
-    public GameObject Questionnaire;
 
     // Reference to Ending and its child/components
     public GameObject Ending;
     private Image Ending_Panel;
     private Text Ending_Text;
 
-    // Use this for initialization
+    // Runs at the start of first frame
     private void Start ()
     {
         // Ensure there's Ending to set
@@ -32,7 +37,8 @@ public class UiFadeOut : MonoBehaviour
             Ending_Text = Ending.transform.Find("Ending Panel").Find("Text").GetComponent<Text>();
         }
     }
-	
+
+    // Returns decreased Alpha Component of Color
     private Color Fade(Color color)
     {
         Color Temp = color;
@@ -61,11 +67,13 @@ public class UiFadeOut : MonoBehaviour
             // When finish fading out
             if (Ending_Panel.color.a == 0.0f && Ending_Text.color.a == 0.0f)
             {
-                // Quit Application
+                // Hide Ending
                 Ending.SetActive(false);
 #if UNITY_EDITOR
+                // Stops running Application
                 UnityEditor.EditorApplication.isPlaying = false;
 #else
+                // Quit Application
                 Application.Quit();
 #endif
             }
@@ -73,10 +81,13 @@ public class UiFadeOut : MonoBehaviour
             // Skip Ending and Quit Application
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                // Hide Ending
                 Ending.SetActive(false);
 #if UNITY_EDITOR
+                // Stops running Application
                 UnityEditor.EditorApplication.isPlaying = false;
 #else
+                // Quit Application
                 Application.Quit();
 #endif
             }
